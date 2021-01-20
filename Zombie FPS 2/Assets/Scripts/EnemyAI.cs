@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Serialization;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -48,7 +49,7 @@ public class EnemyAI : MonoBehaviour
 
     private void AttackTarget()
     {
-        Debug.Log(name + " has seeked and is detroyin " + target.name);
+        //Debug.Log(name + " has seeked and is detroyin " + target.name);
         GetComponent<Animator>().SetBool("attack", true);
     }
 
@@ -56,5 +57,11 @@ public class EnemyAI : MonoBehaviour
     {
         Gizmos.color = new Color(1, 1, 0, 0.75F);
         Gizmos.DrawSphere(transform.position, chaseRange);
+    }
+    
+    private void HitPlayer()
+    {
+        if (target == null) return;
+        Debug.Log(target.name + " got hit!");
     }
 }
