@@ -9,6 +9,7 @@ public class EnemyAI : MonoBehaviour
 {
     [SerializeField] Transform target;
     [SerializeField] float chaseRange = 5f;
+    [SerializeField] float damageGiven = 5f;
 
     NavMeshAgent navMeshAgent;
     float distanceToTarget = Mathf.Infinity;
@@ -63,5 +64,6 @@ public class EnemyAI : MonoBehaviour
     {
         if (target == null) return;
         Debug.Log(target.name + " got hit!");
+        target.GetComponent<PlayerHealth>().damagePlayerHealth(damageGiven);
     }
 }
