@@ -9,6 +9,7 @@ public class EnemyHealth : MonoBehaviour
     public void doDamage(float damageGiven)
     {
         hitPoints = hitPoints - damageGiven;
+        GetComponent<EnemyAI>().OnDamageTaken();
         if (hitPoints<=0)
         {
             Destroy(gameObject);

@@ -5,6 +5,12 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] private float PlayerHealthPoints = 100f;
+    DeathHandler deathHandler;
+
+    public void Start()
+    {
+        deathHandler = FindObjectOfType<DeathHandler>();
+    }
 
     public void damagePlayerHealth(float DamageToThePlayer)
     {
@@ -16,7 +22,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (PlayerHealthPoints<=0)
         {
-            Debug.Log("GAME OVER");
+            deathHandler.HandleDeath();
         }
     }
 

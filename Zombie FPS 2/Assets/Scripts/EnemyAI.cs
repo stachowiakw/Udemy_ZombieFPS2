@@ -14,7 +14,7 @@ public class EnemyAI : MonoBehaviour
 
     NavMeshAgent navMeshAgent;
     float distanceToTarget = Mathf.Infinity;
-    bool isProvoked = false;
+    [SerializeField] bool isProvoked = false;
     
     void Start()
     {
@@ -31,6 +31,10 @@ public class EnemyAI : MonoBehaviour
         //    else
         //    { navMeshAgent.SetDestination(transform.position); }
         //
+    }
+    public void OnDamageTaken()
+    {
+        isProvoked = true;
     }
 
     private void EngageTarget()
