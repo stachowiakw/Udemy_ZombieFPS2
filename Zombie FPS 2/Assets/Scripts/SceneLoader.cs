@@ -8,11 +8,15 @@ public class SceneLoader : MonoBehaviour
 {
     [SerializeField] private Button buttonPlayAgain;
     [SerializeField] private Button buttonQuit;
+    [SerializeField] private Button buttonPlayAgain2;
+    [SerializeField] private Button buttonQuit2;
 
     void Start()
     {
         buttonPlayAgain.onClick.AddListener(PlayAgain);
         buttonQuit.onClick.AddListener(QuitGame);
+        buttonPlayAgain2.onClick.AddListener(PlayAgain);
+        buttonQuit2.onClick.AddListener(QuitGame);
     }
 
     public void PlayAgain()
