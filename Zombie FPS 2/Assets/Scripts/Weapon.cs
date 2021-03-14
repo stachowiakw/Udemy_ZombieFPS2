@@ -10,17 +10,22 @@ public class Weapon : MonoBehaviour
     [SerializeField] private float currentWeaponDamage = 40f;
     [SerializeField] GameObject muzzleFX;
     [SerializeField] GameObject bulletFX;
+    [SerializeField] Ammo ammo;
 
     void Update()
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            Shoot();
+            if (ammo.getAmmoBullets() > 0)
+            {
+                Shoot();
+            }
         }
     }
 
     private void Shoot()
     {
+        ammo.setAmmoBullets(-1);
         PlayMuzzleFX();
         ProcessRaycasting();
     }
