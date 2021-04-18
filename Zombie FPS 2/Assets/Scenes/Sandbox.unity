@@ -1202,6 +1202,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 400707539}
   m_CullTransparentMesh: 0
+--- !u!20 &415640613 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 8150201350323641135, guid: 45f90127021bc9543828b341cb7e245c,
+    type: 3}
+  m_PrefabInstance: {fileID: 8150201350588583615}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &528407181
 GameObject:
   m_ObjectHideFlags: 0
@@ -3705,6 +3711,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7732771907980140802, guid: 45f90127021bc9543828b341cb7e245c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8150201350323143981, guid: 45f90127021bc9543828b341cb7e245c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3805,11 +3816,6 @@ PrefabInstance:
       propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7732771907980140802, guid: 45f90127021bc9543828b341cb7e245c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7732771907979787554, guid: 45f90127021bc9543828b341cb7e245c,
         type: 3}
       propertyPath: m_RootOrder
@@ -3896,6 +3902,11 @@ PrefabInstance:
       propertyPath: ammo
       value: 
       objectReference: {fileID: 335658684}
+    - target: {fileID: 4308069101129868016, guid: 45f90127021bc9543828b341cb7e245c,
+        type: 3}
+      propertyPath: FPCamera
+      value: 
+      objectReference: {fileID: 415640613}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45f90127021bc9543828b341cb7e245c, type: 3}
 --- !u!1 &8150201350588583616 stripped
