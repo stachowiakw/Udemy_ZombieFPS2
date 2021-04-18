@@ -761,27 +761,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goalReachedCanvas: {fileID: 1528270222}
---- !u!1 &273799094 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8150201350323181833, guid: 45f90127021bc9543828b341cb7e245c,
-    type: 3}
-  m_PrefabInstance: {fileID: 8150201350588583615}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &273799095
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 273799094}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea80ab4a4aa2a3f4a9467dfd12c7471d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Weapons:
-  - {fileID: 1272040397}
-  - {fileID: 219638519}
 --- !u!4 &274090898 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8150201350323143981, guid: 45f90127021bc9543828b341cb7e245c,
@@ -794,7 +773,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 8150201350588583615}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 273799094}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 70a7069f0e703434daca54200c933979, type: 3}
@@ -1202,12 +1181,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 400707539}
   m_CullTransparentMesh: 0
+--- !u!1 &415640611 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8150201350323181835, guid: 45f90127021bc9543828b341cb7e245c,
+    type: 3}
+  m_PrefabInstance: {fileID: 8150201350588583615}
+  m_PrefabAsset: {fileID: 0}
 --- !u!20 &415640613 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 8150201350323641135, guid: 45f90127021bc9543828b341cb7e245c,
     type: 3}
   m_PrefabInstance: {fileID: 8150201350588583615}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &415640618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 415640611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea80ab4a4aa2a3f4a9467dfd12c7471d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Weapons:
+  - {fileID: 1272040397}
+  - {fileID: 219638519}
+  currentWeapon: 0
 --- !u!1 &528407181
 GameObject:
   m_ObjectHideFlags: 0
@@ -3779,7 +3780,7 @@ PrefabInstance:
     - target: {fileID: 2756322620186004684, guid: 45f90127021bc9543828b341cb7e245c,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2756322620185514220, guid: 45f90127021bc9543828b341cb7e245c,
         type: 3}
