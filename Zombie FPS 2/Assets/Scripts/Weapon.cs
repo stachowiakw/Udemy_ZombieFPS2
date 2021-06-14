@@ -11,23 +11,42 @@ public class Weapon : MonoBehaviour
     [SerializeField] GameObject muzzleFX;
     [SerializeField] GameObject bulletFX;
     [SerializeField] Ammo ammo;
+    [SerializeField] AmmoType ammoType;
+    [SerializeField] float timeBetweenShots = 0.5f;
+    [SerializeField] float timeAfterChangingWeapons = 1f;
+    bool canShoot = true;
+    //bool weaponChangeFinished = true;
+
+    private void OnEnable()
+    {
+        ammo = FindObjectOfType<Ammo>();
+        ammo.SetAmmoCounterGUI(ammoType);
+        canShoot = true;
+    }
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && canShoot == true)
         {
-            if (ammo.getAmmoBullets() > 0)
+            if (ammo.getAmmoBullets(ammoType) > 0)
             {
-                Shoot();
+                StartCoroutine(Shoot());
             }
         }
     }
 
-    private void Shoot()
+    IEnumerator Shoot()
     {
-        ammo.setAmmoBullets(-1);
-        PlayMuzzleFX();
-        ProcessRaycasting();
+        canShoot = false;
+        if (ammo.getAmmoBullets(ammoType) > 0)
+        {
+            ammo.ReduceCurrentAmmo(ammoType);
+            ammo.SetAmmoCounterGUI(ammoType);
+            PlayMuzzleFX();
+            ProcessRaycasting();
+        }
+        yield return new WaitForSeconds(timeBetweenShots);
+        canShoot = true;
     }
 
     private void PlayMuzzleFX()

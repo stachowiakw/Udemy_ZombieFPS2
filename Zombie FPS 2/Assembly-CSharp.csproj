@@ -63,12 +63,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\GoalPlatformBehaviour.cs" />
+    <Compile Include="Assets\PickUp_Ammo.cs" />
     <Compile Include="Assets\Scripts\Ammo.cs" />
+    <Compile Include="Assets\Scripts\AmmoType.cs" />
     <Compile Include="Assets\Scripts\DeathHandler.cs" />
     <Compile Include="Assets\Scripts\EnemyAI.cs" />
     <Compile Include="Assets\Scripts\EnemyHealth.cs" />
     <Compile Include="Assets\Scripts\GoalHandler.cs" />
+    <Compile Include="Assets\Scripts\GoalPlatformBehaviour.cs" />
     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\SceneLoader.cs" />
     <Compile Include="Assets\Scripts\Weapon.cs" />
