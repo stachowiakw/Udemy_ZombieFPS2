@@ -15,7 +15,8 @@ public class EnemyAI : MonoBehaviour
     NavMeshAgent navMeshAgent;
     float distanceToTarget = Mathf.Infinity;
     [SerializeField] bool isProvoked = false;
-    
+    bool isAlive = true;
+
     void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
@@ -24,14 +25,26 @@ public class EnemyAI : MonoBehaviour
     void Update()
     {
         distanceToTarget = Vector3.Distance(target.position, transform.position);
-        if (isProvoked)
+        if (isProvoked && isAlive)
         { EngageTarget(); }
+        else if (isAlive == false)
+        { navMeshAgent.SetDestination(gameObject.transform.position); }
         else if (distanceToTarget <= chaseRange)
         { isProvoked = true; }
         //    else
         //    { navMeshAgent.SetDestination(transform.position); }
         //
     }
+    public void setAliveStatus(bool isAliveStatus)
+    {
+        isAlive = isAliveStatus;
+    }
+
+    public bool getAliveStatus()
+    {
+        return isAlive;
+    }
+
     public void OnDamageTaken()
     {
         isProvoked = true;
@@ -39,12 +52,12 @@ public class EnemyAI : MonoBehaviour
 
     private void EngageTarget()
     {
-        FaceTarget();
-        if (distanceToTarget > navMeshAgent.stoppingDistance)
-        { ChaseTarget(); }
+                FaceTarget();
+                if (distanceToTarget > navMeshAgent.stoppingDistance)
+                { ChaseTarget(); }
 
-        if (distanceToTarget <= navMeshAgent.stoppingDistance)
-        { AttackTarget(); }
+                if (distanceToTarget <= navMeshAgent.stoppingDistance)
+                { AttackTarget(); }
     }
 
     private void ChaseTarget()
