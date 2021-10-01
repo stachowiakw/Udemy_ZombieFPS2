@@ -15,6 +15,7 @@ public class EnemyHealth : MonoBehaviour
         {
             GetComponent<EnemyAI>().setAliveStatus(false);
             GetComponent<Animator>().SetTrigger("death");
+            GetComponent<CapsuleCollider>().enabled = false;
             //Destroy(gameObject);
         }   
     }
