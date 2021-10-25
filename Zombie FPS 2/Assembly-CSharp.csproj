@@ -196,8 +196,17 @@
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/repos/ZombieFPS2/ZombieFPS2/Zombie FPS 2/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.ProGrids">
+      <HintPath>C:/repos/ZombieFPS2/ZombieFPS2/Zombie FPS 2/Library/ScriptAssemblies/Unity.ProGrids.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>C:/repos/ZombieFPS2/ZombieFPS2/Zombie FPS 2/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
+      <HintPath>C:/repos/ZombieFPS2/ZombieFPS2/Zombie FPS 2/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProGrids.Editor">
+      <HintPath>C:/repos/ZombieFPS2/ZombieFPS2/Zombie FPS 2/Library/ScriptAssemblies/Unity.ProGrids.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/repos/ZombieFPS2/ZombieFPS2/Zombie FPS 2/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
@@ -213,6 +222,9 @@
     </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>C:/repos/ZombieFPS2/ZombieFPS2/Zombie FPS 2/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProBuilder.AddOns.Editor">
+      <HintPath>C:/repos/ZombieFPS2/ZombieFPS2/Zombie FPS 2/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>C:/repos/ZombieFPS2/ZombieFPS2/Zombie FPS 2/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
@@ -396,9 +408,6 @@
     </Reference>
     <Reference Include="UnityEngine.XRModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
-    </Reference>
-    <Reference Include="Assembly-CSharp-firstpass">
-      <HintPath>C:/repos/ZombieFPS2/ZombieFPS2/Zombie FPS 2/Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
