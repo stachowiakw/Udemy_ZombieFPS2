@@ -3642,10 +3642,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ca1d6935a89f714aaa15dfd3e874239, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DamageSplatter:
+  damageSplatter:
   - {fileID: 1356693589}
   - {fileID: 687413068}
   - {fileID: 1320337699}
+  splatterDisplayTime: 1
+  splatterRow: 0
 --- !u!1001 &966701651
 PrefabInstance:
   m_ObjectHideFlags: 0
