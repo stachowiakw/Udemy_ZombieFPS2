@@ -21,11 +21,6 @@ public class Ammo : MonoBehaviour
         public int ammoAmount;
     }
 
-    //public void Start()
-    //{
-    //    ammoAmount = 30;
-    //}
-
     //public void setAmmoBullets(int ammoChange)
     //{
     //    if (ammoChange < 0 && ammoAmount <= 0)
@@ -38,10 +33,9 @@ public class Ammo : MonoBehaviour
     //}
 
     public void SetAmmoCounterGUI(AmmoType ammoType)
-        {
+    {
         AmmoCounter.text = GetAmmoSlot(ammoType).ammoAmount.ToString();
-        }
-
+    }
 
     public int getAmmoBullets(AmmoType ammoType)
     { 
@@ -56,7 +50,8 @@ public class Ammo : MonoBehaviour
     public void AddAmmo(AmmoType ammoType, int ammoAdded)
     {
         GetAmmoSlot(ammoType).ammoAmount = GetAmmoSlot(ammoType).ammoAmount+ammoAdded;
-        SetAmmoCounterGUI(ammoType);
+        if (ammoType == FindObjectOfType<WeaponSelector>().GetCurrentWeaponAmmoType())
+        { SetAmmoCounterGUI(ammoType); }
     }
 
     private AmmoSlot GetAmmoSlot(AmmoType ammoType)

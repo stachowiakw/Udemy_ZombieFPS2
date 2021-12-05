@@ -15,6 +15,7 @@ public class PlayerHealth : MonoBehaviour
     public void damagePlayerHealth(float DamageToThePlayer)
     {
         PlayerHealthPoints = PlayerHealthPoints - DamageToThePlayer;
+        GameObject.FindObjectOfType<DamageVisuals>().ActivateRandomSplatter();
         checkIfDead();
     }
 

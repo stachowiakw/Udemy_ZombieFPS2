@@ -138,6 +138,7 @@
     <Compile Include="Assets\Scripts\Ammo.cs" />
     <Compile Include="Assets\Scripts\AmmoType.cs" />
     <Compile Include="Assets\Scripts\BatteryIndicator.cs" />
+    <Compile Include="Assets\Scripts\DamageVisuals.cs" />
     <Compile Include="Assets\Scripts\DeathHandler.cs" />
     <Compile Include="Assets\Scripts\EnemyAI.cs" />
     <Compile Include="Assets\Scripts\EnemyHealth.cs" />

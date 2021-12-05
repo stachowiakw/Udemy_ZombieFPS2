@@ -11,7 +11,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] GameObject muzzleFX;
     [SerializeField] GameObject bulletFX;
     [SerializeField] Ammo ammo;
-    [SerializeField] AmmoType ammoType;
+    [SerializeField] public AmmoType ammoType;
     [SerializeField] float timeBetweenShots = 0.5f;
     [SerializeField] float timeAfterChangingWeapons = 1f;
     bool canShoot = true;
